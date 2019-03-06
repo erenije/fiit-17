@@ -1,4 +1,3 @@
-
 #include <string>
 
 using namespace std;
@@ -73,53 +72,57 @@ string string_from_int(int number)
 
 
 }
-string  number_less_100(int n)
+string  number_less_100(int number)
 	{
 	string an;
-	if(n/10==2){
-		int a=n%10;
+	if(number<20)
+	{
+		an = string_from_int(number);
+	}
+	if(number/10==2){
+		int a=number%10;
 		if(a==0) an = "двадцать";
 		else an="двадцать " + string_from_int(a);
 	
 	}
-	else if(n/10==3){
-		int a=n%10;
+	else if(number/10==3){
+		int a=number%10;
 		if(a==0) an = "тридцать";
 		else an="тридцать " + string_from_int(a);
 	
 	}
-	else if(n/10==4){
-		int a=n%10;
+	else if(number/10==4){
+		int a=number%10;
 		if(a==0) an = "сорок";
 		else an="сорок " + string_from_int(a);
 	
 	}
-	else if(n/10==5){
-		int a=n%10;
+	else if(number/10==5){
+		int a=number%10;
 		if(a==0) an = "п€тьдес€ть";
 		else an="п€тьдес€ть " + string_from_int(a);
 
 	}
-	else if(n/10==6){
-		int a=n%10;
+	else if(number/10==6){
+		int a=number%10;
 		if(a==0) an = "шестьдес€ть";
 		else an="шестьдес€ть " + string_from_int(a);
 
 	}
-	else if(n/10==7){
-		int a=n%10;
+	else if(number/10==7){
+		int a=number%10;
 		if(a==0) an = "семьдес€ть";
 		else an="семьдес€ть " + string_from_int(a);
 
 	}
-	else if(n/10==8){
-		int a=n%10;
+	else if(number/10==8){
+		int a=number%10;
 		if(a==0) an = "восемьдес€ть";
 		else an="восемьдес€ть " + string_from_int(a);
 
 	}
-	else if(n/10==9){
-		int a=n%10;
+	else if(number/10==9){
+		int a=number%10;
 		if(a==0) an = "дев€носто";
 		else an="дев€носто " + string_from_int(a);
 
@@ -128,69 +131,91 @@ string  number_less_100(int n)
 		
 		return an;
 }
-string  number_less_1000(int num)
+string  number_less_1000(int number)
 	{
 	string ans;
-	if(num/100==1){
-		int a=num%100;
+		if (number<100)
+	{ans =  number_less_100(number);}
+	if(number/100==1){
+		int a=number%100;
 		if(a==0) ans = "сто";
-		else ans="сто " + string_from_int(a);
+		else ans="сто " + number_less_100(a);
 			}
-	else if(num/100==2){
-		int a=num%100;
+	else if(number/100==2){
+		int a=number%100;
 		if(a==0) ans = "двести";
-		else ans="двести " + string_from_int(a);
+		else ans="двести " + number_less_100(a);
 
 	}
-	else if(num/100==3){
-		int a=num%100;
+	else if(number/100==3){
+		int a=number%100;
 		if(a==0) ans = "триста";
-		else ans="триста " + string_from_int(a);
+		else ans="триста " + number_less_100(a);
 
 	}
-	else if(num/100==4){
-		int a=num%100;
+	else if(number/100==4){
+		int a=number%100;
 		if(a==0) ans = "четыреста";
-		else ans="четыреста " + string_from_int(a);
+		else ans="четыреста " + number_less_100(a);
 
 	}
-	else if(num/100==5){
-		int a=num%100;
+	else if(number/100==5){
+		int a=number%100;
 		if(a==0) ans = "п€тьсот";
-		else ans="п€тьсот " + string_from_int(a);
+		else ans="п€тьсот " + number_less_100(a);
 
 	}
-	else if(num/100==6){
-		int a=num%100;
+	else if(number/100==6){
+		int a=number%100;
 		if(a==0) ans = "шестьсот";
-		else ans="шестьсот " + string_from_int(a);
+		else ans="шестьсот " + number_less_100(a);
 
 	}
-	else if(num/100==7){
-		int a=num%100;
+	else if(number/100==7){
+		int a=number%100;
 		if(a==0) ans = "семьсот";
-		else ans="семьсот " + string_from_int(a);
+		else ans="семьсот " + number_less_100(a);
 
 	}
-	else if(num/100==8){
-		int a=num%100;
+	else if(number/100==8){
+		int a=number%100;
 		if(a==0) ans = "восемьсот";
-		else ans="восемьсот " + string_from_int(a);
+		else ans="восемьсот " + number_less_100(a);
 
 	}
-	else if(num/100==9){
-		int a=num%100;
+	else if(number/100==9){
+		int a=number%100;
 		if(a==0) ans = "дев€тьсот";
-		else ans="дев€тьсот " + string_from_int(a);
+		else ans="дев€тьсот " + number_less_100(a);
 
 	}
-	else if(num/100==10){
-		int a=num%100;
+	else if(number/100==10){
+		int a=number%100;
 		if(a==0) ans = "тыс€ча";
-		else ans="тыс€ча " + string_from_int(a);
+		else ans="тыс€ча " + number_less_100(a);
 
 	}
 
 
 	return ans;
+
+
+
+}
+string objects_less_100_to_string(int number, string s1,string s2,string s3)
+{
+	string answer;
+	if (number%10==1) 
+		answer = number_less_1000(number)+" "+s1;
+	else
+	if (number%10>1&&number%10<5) 
+		answer = number_less_1000(number)+" "+s2;
+	else
+	answer = number_less_1000(number)+" "+s3;
+	return answer;
+}
+string currency_to_string(int integer, string si1, string si2, string si3, int decimal, string sd1, string sd2, string sd3)
+{
+	string answer = objects_less_100_to_string(integer,si1,si2,si3)+", "+objects_less_100_to_string(decimal,sd1,sd2,sd3);
+    return answer;
 }
