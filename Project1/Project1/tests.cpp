@@ -72,11 +72,9 @@ BOOST_AUTO_TEST_CASE( test_case4 )
 		}
 BOOST_AUTO_TEST_CASE( test_case5 )
 {
-	BOOST_TEST(currency_to_string(25, "рубль", "рубля", "рублей", 73, "копейка", "копейки", "копеек") == string("двадцать пять рублей, семьдесят три копейки"));
+	BOOST_TEST(currency_to_string(25, "рубль", "рубля", "рублей", 3, "копейка", "копейки", "копеек") == string("двадцать пять рублей, три копейки"));
 	
-
-
-}
+	}
 
 
 BOOST_AUTO_TEST_SUITE_END()

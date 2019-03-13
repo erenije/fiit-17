@@ -195,13 +195,10 @@ string  number_less_1000(int number)
 		else ans="тыс€ча " + number_less_100(a);
 
 	}
-
-
+	
 	return ans;
-
-
-
-}
+	
+	}
 string objects_less_100_to_string(int number, string s1,string s2,string s3)
 {
 	string answer;
@@ -216,6 +213,18 @@ string objects_less_100_to_string(int number, string s1,string s2,string s3)
 }
 string currency_to_string(int integer, string si1, string si2, string si3, int decimal, string sd1, string sd2, string sd3)
 {
-	string answer = objects_less_100_to_string(integer,si1,si2,si3)+", "+objects_less_100_to_string(decimal,sd1,sd2,sd3);
+	string answer;
+	int a=integer%100;
+	int b=decimal%100;
+	if (a==11||a==12||a==13||a==14)
+		answer=number_less_1000(integer)+" "+si3;
+	else if (integer%10==1) answer = number_less_1000(integer)+" "+si1;
+	else if (integer%10>1&&integer%10<5) answer=number_less_1000(integer)+" "+si2;
+	else answer = number_less_1000(integer)+" "+si3;
+	if (decimal==0) answer=answer;
+	else if (b==11||b==12||b==13||b==14) answer=answer+", "+number_less_1000(decimal)+" "+sd3;
+	else if (decimal%10==1) answer=answer+", "+number_less_1000(decimal)+" "+sd1;
+	else if (decimal%10>1&&decimal%10<5) answer=answer+", "+number_less_1000(decimal)+" "+sd2;
+	else answer=answer+", "+number_less_1000(decimal)+", "+sd3;
     return answer;
 }

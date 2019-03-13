@@ -111,6 +111,7 @@
     <ClCompile Include="tests.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="map.h" />
     <ClInclude Include="numbers.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
