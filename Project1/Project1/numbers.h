@@ -202,15 +202,18 @@ string  number_less_1000(int number)
 string objects_less_100_to_string(int number, string s1,string s2,string s3)
 {
 	string answer;
+	if (number%100==11||number%100==12||number%100==13||number%100==14) answer = number_less_1000(number)+" "+s3;
+	else
 	if (number%10==1) 
-		answer = number_less_1000(number)+" "+s1;
+	answer = number_less_1000(number)+" "+s1;
 	else
 	if (number%10>1&&number%10<5) 
-		answer = number_less_1000(number)+" "+s2;
+	answer = number_less_1000(number)+" "+s2;
 	else
 	answer = number_less_1000(number)+" "+s3;
 	return answer;
 }
+
 string currency_to_string(int integer, string si1, string si2, string si3, int decimal, string sd1, string sd2, string sd3)
 {
 	string answer;
