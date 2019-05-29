@@ -3,6 +3,7 @@
 
 #include <boost/test/included/unit_test.hpp>
 #include "numbers.h"
+#include "map.h";
 
 
 BOOST_AUTO_TEST_SUITE( test_suite1 )
@@ -48,13 +49,15 @@ BOOST_TEST(number_less_100(87)==string("восемьдесять семь"));
 BOOST_TEST(number_less_100(91)==string("девяносто один"));
 BOOST_TEST(number_less_100(92)==string("девяносто два"));
 BOOST_TEST(number_less_100(19)==string("девятьнадцать"));
-
-
+BOOST_TEST(number_less_100(20)==string("двадцать"));
+BOOST_TEST(number_less_100(33)==string("тридцать три"));
+BOOST_TEST(number_less_100(40)==string("сорок"));
 
 
 
 
 }
+
 BOOST_AUTO_TEST_CASE( test_case3 )
 {
 	
@@ -67,6 +70,9 @@ BOOST_TEST(number_less_1000(643)==string("шестьсот сорок три"));
 BOOST_TEST(number_less_1000(700)==string("семьсот"));
 BOOST_TEST(number_less_1000(801)==string("восемьсот один"));
 BOOST_TEST(number_less_1000(900)==string("девятьсот"));
+BOOST_TEST(number_less_1000(100)==string("сто"));
+
+
 
 
 
@@ -82,6 +88,10 @@ BOOST_AUTO_TEST_CASE( test_case4 )
 	BOOST_TEST(objects_less_100_to_string(1,"стул", "стула", "стулей") == string("один стул"));
 	BOOST_TEST(objects_less_100_to_string(11,"рубль", "рубля", "рублей") == string("одинадцать рублей"));
 	BOOST_TEST(objects_less_100_to_string(400,"копейка", "копейки", "копеек") == string("четыреста копеек"));
+	BOOST_TEST(objects_less_100_to_string(4,"копейка", "копейки", "копеек") == string("четыре копейки"));
+	BOOST_TEST(objects_less_100_to_string(10,"стул", "стула", "стулей") == string("десять стулей"));
+	BOOST_TEST(objects_less_100_to_string(13,"доллар", "доллара", "долларов") == string("тринадцать долларов"));
+
 
 		}
 BOOST_AUTO_TEST_CASE( test_case5 )
@@ -89,6 +99,7 @@ BOOST_AUTO_TEST_CASE( test_case5 )
 	BOOST_TEST(currency_to_string(25, "рубль", "рубля", "рублей", 3, "копейка", "копейки", "копеек") == string("двадцать пять рублей, три копейки"));
 	BOOST_TEST(currency_to_string(111, "доллар", "доллара", "долларов", 1, "цент", "цента", "центов") == string("сто одинадцать долларов, один цент"));
 	BOOST_TEST(currency_to_string(111, "rubl", "rublya", "rublei", 1, "kopeika", "kopeiki", "kopeek") == string("сто одинадцать rublei, один kopeika"));
+
 	}
 
 
