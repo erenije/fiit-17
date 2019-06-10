@@ -1,0 +1,21 @@
+﻿Build started 29.05.2019 15:12:32.
+     1>Project "C:\Users\Student\Desktop\fiit-17\Project\Project1.vcxproj" on node 2 (Build target(s)).
+       Project file contains ToolsVersion="15.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="4.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=291333.
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\My-Repository\boost_1_69_0" /ZI /nologo /W3 /WX- /Od /Oy- /D TEST /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Test\\" /Fd"Test\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Map.cpp Source.cpp tests.cpp
+         tests.cpp
+     1>c:\users\student\desktop\fiit-17\project\tests.cpp(7): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\student\desktop\fiit-17\project\tests.cpp(8): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\student\desktop\fiit-17\project\tests.cpp(15): fatal error C1083: Cannot open include file: 'boost/test/included/unit_test.hpp': No such file or directory
+         Source.cpp
+         Map.cpp
+     1>c:\users\student\desktop\fiit-17\project\map.cpp(23): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\student\desktop\fiit-17\project\map.cpp(37): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\student\desktop\fiit-17\project\map.cpp(51): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\student\desktop\fiit-17\project\map.cpp(71): warning C4018: '<' : signed/unsigned mismatch
+         Generating Code...
+     1>Done Building Project "C:\Users\Student\Desktop\fiit-17\Project\Project1.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.51

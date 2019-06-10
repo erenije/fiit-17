@@ -1,0 +1,23 @@
+﻿Build started 24.04.2019 14:52:01.
+     1>Project "C:\My-Repository\Project1\Project1.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\Users\Student\Desktop\My-Repository\boost_1_69_0" /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Map.cpp Source.cpp tests.cpp
+         Source.cpp
+     1>c:\my-repository\project1\source.cpp(7): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\my-repository\project1\source.cpp(8): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\my-repository\project1\source.cpp(12): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>c:\my-repository\project1\source.cpp(14): warning C4018: '<' : signed/unsigned mismatch
+         Map.cpp
+         Generating Code...
+         Skipping... (no relevant changes detected)
+         tests.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\My-Repository\Project1\Debug\Project1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\My-Repository\Project1\Debug\Project1.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\My-Repository\Project1\Debug\Project1.lib" /MACHINE:X86 Debug\Map.obj
+         Debug\Source.obj
+         Debug\tests.obj
+         Project1.vcxproj -> C:\My-Repository\Project1\Debug\Project1.exe
+     1>Done Building Project "C:\My-Repository\Project1\Project1.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.59
